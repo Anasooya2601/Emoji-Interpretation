@@ -1,45 +1,43 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-/**
- * concept notes: styling in react
- */
-
-/**
- * concept of hashmap (object as hashmap)
- * O(1) and why we are doing this.
- */
 const emojiDictionary = {
   "🎄": "Christmas Tree",
-  "🎓": "Graduation",
-  "🥱": "sleepy",
-  "😊": "Smiling",
-  "🎃": "Halloween",
-  "😳": "disbelief",
-  "😔": "sad",
-  "🥡": "takeout box",
-  "❤️": "love",
-  "😑": "annoyance",
-  "🕉️": "Holi",
-  "⛄": "Winter",
-  "🌎": "World Emoji Day",
-  "🎂": "Birthday",
-  "🪔": "Diwali",
-  "🕎": "Hanukkah",
-  "💕": "Hearts",
-  "🤱": "Mother’s Day",
-  "🦃": "Thanksgiving"
-  /** add some more to show how the app now expands when there's new data */
+  "🚣": "Person Rowing Boat",
+  "🗾": "Map of Japan",
+  "🏔️": "Snow-Capped Mountain",
+  "⛰️": "Mountain",
+  "🌋": "Volcano",
+  "🗻": "Mount Fuji",
+  "🏕️": "Camping",
+  "🏖️": "Beach with Umbrella",
+  "🏜️": "Desert",
+  "🏝️": "Desert Island",
+  "🏞️": "National Park",
+  "🏟️": "Stadium",
+  "🏛️": "Classical Building",
+  "🏗️": "Building Construction",
+  "🕋": "Kaaba",
+  "⛲": "Fountain",
+  "⛺": "Tent",
+  "🌁": "Foggy",
+  "🌃": "Night with Stars",
+  "🏙️": "Cityscape",
+  "🌄": "Sunrise Over Mountains",
+  "🌅": "Sunrise",
+  "🌆": "Cityscape at Dusk",
+  "🌇": "Sunset",
+  "🌉": "Bridge at Night",
+  "🎠": "Carousel Horse",
+  "🎡": " Ferris",
+  "🎢": "Roller Coaster",
+  "🚂": "Locomotive"
 };
 
-/**
- * Bonus feature
- * converting an object to array of keys
- */
 const emojis = Object.keys(emojiDictionary);
 
 export default function App() {
-  const [emoji, setEmoji] = useState(""); /** concept 2 is useState */
+  const [emoji, setEmoji] = useState("");
   const [meaning, setMeaning] = useState("translation will appear here..");
 
   function changeHandler(event) {
@@ -58,8 +56,8 @@ export default function App() {
   }
 
   return (
-    /** concept 3 is onchange */
     <div className="App">
+      <h2> 🌇 Travel & Places</h2>
       <h1>Emoji Interpreter</h1>
       <input
         onChange={changeHandler}
@@ -70,29 +68,23 @@ export default function App() {
           minWidth: "80%"
         }}
       />
-      <h2> {emoji} </h2> {/** Concept 1: JSX */}
-      <h3> {meaning} </h3> {/** how much part is re-rendered. */}
-      {
-        /** Bonus feature; if time permmits */
-        /**
-         * concepts to cover: mapping a list
-         * click handler on list item
-         */
-        emojis.map((emoji) => (
-          <span
-            onClick={() => emojiClickHandler(emoji)}
-            style={{
-              fontfamily: "'Roboto', sans-serif",
-              fontSize: "2rem",
-              padding: "0.5rem",
-              cursor: "pointer"
-            }}
-          >
-            {" "}
-            {emoji}{" "}
-          </span>
-        ))
-      }
+      <h2> {emoji} </h2> {}
+      <h3> {meaning} </h3> {}
+      {emojis.map((emoji) => (
+        <span
+          onClick={() => emojiClickHandler(emoji)}
+          style={{
+            // fontfamily: "'Roboto', sans-serif",
+            fontfamily: "'Langar', cursive",
+            fontSize: "2rem",
+            padding: "0.5rem",
+            cursor: "pointer"
+          }}
+        >
+          {" "}
+          {emoji}{" "}
+        </span>
+      ))}
     </div>
   );
 }

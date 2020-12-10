@@ -1,5 +1,10 @@
 .App {
-  font-family: "Nerko One", cursive;
+  font-family: "Roboto Slab", serif;
   text-align: center;
-  background: #818cf8;
+  background: #fee2e2;
+  padding: 100px;
+}
+h2 {
+  font-family: sans-serif;
+  color: #1f2937;
 }
