@@ -1,8 +1,11 @@
 .App {
   font-family: "Roboto Slab", serif;
   text-align: center;
-  background-color: #fee2e2;
-  padding: 100px;
+
+  /* padding: 100px; */
+}
+body {
+  background: #fef2f2;
 }
 h2 {
   font-family: sans-serif;
